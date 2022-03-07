@@ -11,6 +11,7 @@
 		DBB4575327D6858D00C3B90D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4575227D6858D00C3B90D /* SettingsViewModel.swift */; };
 		DBB4575627D6A07F00C3B90D /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4575527D6A07F00C3B90D /* AnimationExtensions.swift */; };
 		DBB4575827D6A09500C3B90D /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4575727D6A09500C3B90D /* ViewExtensions.swift */; };
+		DBB4575B27D6B42300C3B90D /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4575A27D6B42300C3B90D /* Searching.swift */; };
 		DBDAAE0A27D3DA7C00393D9C /* ZestAlphaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE0927D3DA7C00393D9C /* ZestAlphaApp.swift */; };
 		DBDAAE0C27D3DA7C00393D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE0B27D3DA7C00393D9C /* ContentView.swift */; };
 		DBDAAE0E27D3DA7D00393D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDAAE0D27D3DA7D00393D9C /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		DBB4575227D6858D00C3B90D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DBB4575527D6A07F00C3B90D /* AnimationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
 		DBB4575727D6A09500C3B90D /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		DBB4575A27D6B42300C3B90D /* Searching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searching.swift; sourceTree = "<group>"; };
 		DBDAAE0627D3DA7C00393D9C /* ZestAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZestAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDAAE0927D3DA7C00393D9C /* ZestAlphaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZestAlphaApp.swift; sourceTree = "<group>"; };
 		DBDAAE0B27D3DA7C00393D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 				DBB4575727D6A09500C3B90D /* ViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DBB4575927D6B41800C3B90D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBB4575A27D6B42300C3B90D /* Searching.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DBDAADFD27D3DA7C00393D9C = {
@@ -199,6 +209,7 @@
 		DBDAAE3427D3DD7E00393D9C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DBB4575927D6B41800C3B90D /* Helpers */,
 				DBDAAE4A27D437CA00393D9C /* MainViewModel.swift */,
 				DBDAAE4C27D43A8300393D9C /* DatePackageViewModel.swift */,
 				DB59246527D58B1E0000C2BC /* PersonalViewModel.swift */,
@@ -346,6 +357,7 @@
 				DBDAAE3727D3DE1D00393D9C /* OnboardingView.swift in Sources */,
 				DBDAAE5227D50B7900393D9C /* BackArrow.swift in Sources */,
 				DBB4575827D6A09500C3B90D /* ViewExtensions.swift in Sources */,
+				DBB4575B27D6B42300C3B90D /* Searching.swift in Sources */,
 				DBB4575327D6858D00C3B90D /* SettingsViewModel.swift in Sources */,
 				DBDAAE0A27D3DA7C00393D9C /* ZestAlphaApp.swift in Sources */,
 				DBDAAE4F27D447D200393D9C /* UIConstants.swift in Sources */,

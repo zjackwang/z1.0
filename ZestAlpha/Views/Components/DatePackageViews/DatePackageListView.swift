@@ -13,6 +13,9 @@ struct DatePackageListView: View {
 
     @StateObject var dpvm = DatePackageViewModel.shared
     @StateObject var mvm = MainViewModel.shared
+    
+    @State private var editMode = EditMode.inactive
+
 
     /*
      * UI elements
@@ -76,6 +79,12 @@ struct DatePackageListView: View {
                             }
                             .tint(.green)
                         }
+                }
+            }
+            .environment(\.editMode, $editMode)
+            .onChange(of: datePackages) { _ in
+                if editMode == .active && datePackages.count == 0 {
+                    editMode = .inactive
                 }
             }
             .refreshable {

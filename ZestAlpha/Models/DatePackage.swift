@@ -19,6 +19,10 @@ struct DatePackage: Identifiable, Codable {
     var isFavorited: Bool
 }
 
+extension DatePackage: Equatable {
+    
+}
+
 extension DatePackage {
     static let samples = [
         DatePackage(

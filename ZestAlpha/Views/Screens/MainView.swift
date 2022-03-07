@@ -12,6 +12,7 @@ struct MainView: View {
     // Controls
     @StateObject var mvm = MainViewModel.shared
     @StateObject var dpvm  = DatePackageViewModel.shared
+    @StateObject var pvm  = PersonalViewModel.shared
     @StateObject var svm  = SettingsViewModel.shared
     
     let transition = UIConstants.MAIN_TRANSITION
@@ -92,10 +93,13 @@ struct MainView: View {
         }
         // NOTE: iOS 15.0
         .searchable(
-            text: $dpvm.searchText,
+            text: mvm.state == .home ? $dpvm.searchText : $pvm.searchText,
             placement: .automatic,
             prompt: searchBarText)
-        .onChange(of: dpvm.searchText, perform: dpvm.userSearched)
+        .onChange(
+            of: mvm.state == .home ? dpvm.searchText : pvm.searchText,
+            perform: mvm.state == .home ? dpvm.userSearched : pvm.userSearched
+        )
 //        .onChange(of: dpvm.searchText) { searchText in
 //            dpvm.userSearched(for: searchText)
 //        }

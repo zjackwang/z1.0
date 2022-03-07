@@ -25,7 +25,7 @@ struct PersonalView: View {
     var body: some View {
         VStack {
             if pvm.hasSavedPackages() {
-                DatePackageListView(datePackages: $pvm.savedDatePackages)
+                DatePackageListView(datePackages: $pvm.searchedDatePackages)
             } else {
                 Spacer()
                 Text("Favorite some date packages and they'll show up here!")
