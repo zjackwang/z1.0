@@ -39,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "317B1189-D816-43C1-9A38-5B88FD81DFA4"
+            uuid = "8E5E58B9-0017-427C-ADC6-0E2420079163"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZestAlpha/Views/Screens/PersonalView.swift"
+            filePath = "ZestAlpha/Views/Screens/Onboarding/OnboardingView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "body"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "addNameSection"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>

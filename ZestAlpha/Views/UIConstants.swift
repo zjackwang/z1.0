@@ -64,20 +64,26 @@ struct UIConstants {
     /*
      * Text
      */
-    static let TITLE_TEXT_FONT: Font = .system(size: 50, weight: .semibold, design: .rounded)
+    static let TITLE_TEXT_FONT: Font = .system(size: 50, weight: .semibold, design: .default)
     static let BODY_TEXT_FONT: Font = .system(size: 11, weight: .regular, design: .serif)
     static let HEADER_TEXT_FONT: Font = .system(size: 13, weight: .semibold, design: .serif)
     
     /*
-     * MAIN View
+     * MARK: MAIN VIEW
      */
     static let MAIN_TRANSITION: AnyTransition = .asymmetric(
         insertion: .move(edge: .trailing),
         removal: .move(edge: .leading))
-
+    static let MAIN_TITLE_WIDTH: CGFloat = SCREEN_WIDTH / 3
+    
+    // Profile Icon
+    static let PROFILE_ICON_WIDTH: CGFloat = 50
+    static let PROFILE_ICON_HEIGHT: CGFloat = 50
+    
     // Lemon Icon
     static let LEMON_ICON_WIDTH: CGFloat = 75
     static let LEMON_ICON_HEIGHT: CGFloat = 75
+    static let LEMON_ANIMATION: Animation = Animation.default.repeatForever(autoreverses: false)
     
     /*
      * Heart Icon
@@ -103,4 +109,38 @@ struct UIConstants {
     static let BACK_BUTTON_ALIGNMENT: Alignment = .topLeading
     static let BACK_BUTTON_FONT: Font = .system(size: 40, weight: .semibold, design: .default)
     static let BACK_BUTTON_COLOR: Color = SURFACE_COLOR
+    
+    
+    /*
+     * MARK: ONBOARDING VIEW
+     */
+    
+    static let ONBOARDING_TRANSITION: AnyTransition = .asymmetric(
+        insertion: .move(edge: .trailing),
+        removal: .move(edge: .leading))
+    
+    static let WELCOME_TRANSITION: AnyTransition = .asymmetric(
+        insertion: AnyTransition.opacity.animation(Animation.default.delay(1.5)),
+        removal: AnyTransition.opacity
+    )
+    
+    static let ONBOARDING_BACKGROUND_COLORS = [SECONDARY_COLOR, PRIMARY_COLOR]
+    
+    static let ONBOARDING_BACKGROUND = LinearGradient(colors: ONBOARDING_BACKGROUND_COLORS, startPoint: .topLeading, endPoint: .bottomTrailing)
+    
+    
+    static let ONBOARDING_BODY_TEXT_COLOR = BG_COLOR
+    static let ONBOARDING_BODY_TEXT = BODY_TEXT_FONT
+    static let ONBOARDING_BUTTON_BG_COLOR: Color = .white
+    static let ONBOARDING_BUTTON_TEXT_COLOR = NEUTRAL_COLOR
+    static let ONBOARDING_BUTTON_TEXT_FONT: Font = .system(size: 23, weight: .medium, design: .default)
+    static let ONBOARDING_TITLE_FONT: Font = .system(size: 75, weight: .bold, design: .default)
+    
+    static let ONBOARDING_TITLE1 = "Not just a match,"
+    static let ONBOARDING_TITLE2 = "a Date."
+    static let ONBOARDING_TITLE3 = "ZEST"
+    
+    static let ONBOARDING_INPUT_TEXT_COLOR = NEUTRAL_COLOR
 }
+
+

@@ -19,8 +19,6 @@ struct LogoView: View {
     
     let width: CGFloat = UIConstants.LOGO_WIDTH
     let height: CGFloat = UIConstants.LOGO_WIDTH
-    
-
 
     /*
      * View Models

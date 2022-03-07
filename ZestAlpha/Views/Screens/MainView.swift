@@ -10,14 +10,19 @@ import SwiftUI
 struct MainView: View {
     
     // Controls
-    @State var state: ViewStates = .home // TODO: move to main view model
+    @StateObject var mvm = MainViewModel.shared
     @StateObject var dpvm  = DatePackageViewModel.shared
+    @StateObject var svm  = SettingsViewModel.shared
     
     let transition = UIConstants.MAIN_TRANSITION
     
     // Dimensions
     private let titleFont: Font = UIConstants.TITLE_TEXT_FONT
+    private let titleWidth: CGFloat = UIConstants.MAIN_TITLE_WIDTH
     
+    // Profile Icon
+    private let profileWidth: CGFloat = UIConstants.PROFILE_ICON_WIDTH
+    private let profileHeight: CGFloat = UIConstants.PROFILE_ICON_HEIGHT
     
     // Lemon Icon
     private let lemonIconWidth: CGFloat = UIConstants.LEMON_ICON_WIDTH
@@ -49,7 +54,7 @@ struct MainView: View {
                     .ignoresSafeArea()
                 // Content
                 ZStack {
-                    switch state {
+                    switch mvm.state {
                     case .home:
                         DatePackageListView(datePackages: $dpvm.datePackages)
                             .transition(transition)
@@ -64,9 +69,17 @@ struct MainView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    if mvm.state == .personal {
+                        userProfilePicture
+                            .padding([.bottom], 10)
+                    }
+                }
                 ToolbarItemGroup(placement: .principal) {
                     // TODO: LOGO + ICON
                     principalTitleText
+                        .foregroundColor(onBackground)
+                        .frame(width: titleWidth)
                         .padding([.bottom], 10)
                 }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -82,9 +95,10 @@ struct MainView: View {
             text: $dpvm.searchText,
             placement: .automatic,
             prompt: searchBarText)
-        .onChange(of: dpvm.searchText) { searchText in
-            userSearched(for: searchText)
-        }
+        .onChange(of: dpvm.searchText, perform: dpvm.userSearched)
+//        .onChange(of: dpvm.searchText) { searchText in
+//            dpvm.userSearched(for: searchText)
+//        }
     }
 }
 
@@ -92,26 +106,39 @@ struct MainView: View {
 
 extension MainView {
     private var principalTitleText: some View {
-        switch state {
+        switch mvm.state {
         case .home:
             return Text("ZEST").font(titleFont)
         case .personal:
-            return Text("NAME").font(.title)
+            return Text(svm.name).font(.title)
         default:
             return Text("DEFAULT TITLE")
         }
     }
     
+    private var userProfilePicture: some View {
+        Image(systemName: "person.circle.fill")
+            .resizable()
+            .scaledToFit()
+            .frame(width: profileWidth, height: profileHeight)
+            .foregroundColor(onSurface)
+    }
+    
     private var interactiveLemonIcon: some View {
         Button {
-            lemonIconPressed()
+            mvm.lemonIconPressed()
         } label: {
-            LemonIcon(width: lemonIconWidth, height: lemonIconHeight, alignment: .center)
+            ZStack {
+                LemonIcon(width: 75, height: 75, alignment: .center)
+//                    .hidden(mvm.isLoading)
+//                LoadingLemonIcon(width: 75, height: 75, alignment: .center)
+//                    .hidden(!mvm.isLoading)
+            }
         }
     }
     
     private var searchBarText: String {
-        switch state {
+        switch mvm.state {
         case .home:
             return "Find your next date!"
         case .personal:
@@ -123,7 +150,7 @@ extension MainView {
     
     private var backButton: some View {
         Button {
-            backButtonPressed()
+            mvm.backButtonPressed()
         } label: {
             BackArrow(width: backButtonWidth, height: backButtonHeight, alignment: backButtonAlignment, font: backButtonFont, color: backButtonColor)
         }
@@ -132,39 +159,8 @@ extension MainView {
     
 }
 
-// MARK: FUNCTION
-
-extension MainView {
-    func lemonIconPressed() {
-        withAnimation(.easeInOut) {
-            state = state == .home ? .personal : .home
-        }
-    }
-    
-    func backButtonPressed() {
-        withAnimation(.easeOut) {
-            state = .home
-        }
-    }
-    
-    func userSearched(for searchText: String) {
-        if !searchText.isEmpty {
-            dpvm.filterPackagesByNameAndDescription(searchText: searchText)
-        } else {
-            dpvm.datePackages = dpvm.samples
-        }
-    }
-    
-}
-
-
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            MainView()
-                .previewInterfaceOrientation(.portraitUpsideDown)
-            MainView()
-                .previewInterfaceOrientation(.portrait)
-        }
+        MainView()
     }
 }

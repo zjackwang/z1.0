@@ -12,30 +12,26 @@ struct ZestAlphaApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
 
-    @AppStorage("signed_in") private var currentUserSignedIn: Bool = false
+    private var isCurrentUserSignedIn = SettingsViewModel.shared.isUserSignedIn
     
     init() {
-        // Background color
+        // Allows background color
         UITableView.appearance().backgroundColor = .clear
     }
     
     var body: some Scene {
         WindowGroup {
             ZStack {
-                // Background
-//                LinearGradient(
-//                    colors: [Color.purple, .black],
-//                    startPoint: .topLeading,
-//                    endPoint: .bottomTrailing)
-//                    .ignoresSafeArea()
-                
-                if currentUserSignedIn {
+                if isCurrentUserSignedIn {
                     MainView()
-                        .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)))
+                        .transition(
+                            .asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top))
+                        )
                 } else {
                     OnboardingView()
                         .transition(
-                            .asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
+                            .asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom))
+                        )
                 }
             }
         }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PersonalView: View {
     @StateObject var pvm = PersonalViewModel.shared
-    
+    @StateObject var svm  = SettingsViewModel.shared
+
     // Button Dimensions
     let backButtonWidth: CGFloat = UIConstants.BACK_BUTTON_WIDTH
     let backButtonHeight: CGFloat = UIConstants.BACK_BUTTON_HEIGHT
@@ -18,14 +19,34 @@ struct PersonalView: View {
     
     let textFont: Font = UIConstants.HEADER_TEXT_FONT
     
+    // Text
+    let textColor = UIConstants.ON_BG_COLOR
+    
     var body: some View {
-        if pvm.hasSavedPackages() {
-            DatePackageListView(datePackages: $pvm.savedDatePackages)
-        } else {
-            Text("Favorite some date packages and they'll show up here!")
-                .font(textFont)
-                .frame(alignment: .center)
-        }
+        VStack {
+            if pvm.hasSavedPackages() {
+                DatePackageListView(datePackages: $pvm.savedDatePackages)
+            } else {
+                Spacer()
+                Text("Favorite some date packages and they'll show up here!")
+                    .font(textFont)
+                    .frame(alignment: .center)
+                    .foregroundColor(textColor)
+                Spacer()
+            }
+            Text("SIGN OUT")
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(height: 50)
+                .frame(maxWidth: .infinity)
+//                .background(.)
+                .foregroundColor(textColor)
+                .cornerRadius(15)
+                .onTapGesture {
+                    signOut()
+                }
+                
+            }
     }
 }
 
@@ -37,6 +58,9 @@ extension PersonalView {
 // MARK: FUNCTION
 
 extension PersonalView {
+    func signOut() {
+        svm.isUserSignedIn = false
+    }
 }
 
 struct DisplayPersonalView: View {

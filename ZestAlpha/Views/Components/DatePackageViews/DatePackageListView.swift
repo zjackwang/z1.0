@@ -10,7 +10,9 @@ import SwiftUI
 struct DatePackageListView: View {
     @Binding var datePackages: [DatePackage]
 
+
     @StateObject var dpvm = DatePackageViewModel.shared
+    @StateObject var mvm = MainViewModel.shared
 
     /*
      * UI elements
@@ -31,13 +33,16 @@ struct DatePackageListView: View {
             LazyVGrid(columns: columns) {
                 Text("Click For Info")
                     .font(UIConstants.HEADER_TEXT_FONT)
+                    .foregroundColor(onBackground)
                 Text("Click For Booking")
                     .font(UIConstants.HEADER_TEXT_FONT)
+                    .foregroundColor(onBackground)
             }
             List {
                 ForEach(datePackages) { datePackage in
                     DatePackageView(datePackage: datePackage)
                         .padding([.top, .bottom], rowPadding)
+                        
                         .swipeActions(edge: .trailing) {
                             if !datePackage.isFavorited {
                                 Button {
@@ -72,6 +77,12 @@ struct DatePackageListView: View {
                             .tint(.green)
                         }
                 }
+            }
+            .refreshable {
+                mvm.isLoading.toggle()
+//                withAnimation(Animation.default.delay(2.0)) {
+//                    mvm.isLoading.toggle()
+//                }
             }
             .listStyle(.inset)
             .listRowSeparator(.hidden)

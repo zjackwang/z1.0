@@ -26,8 +26,16 @@ class DatePackageViewModel: ObservableObject {
     }
     
     /*
-     * MARK: Content
+     * MARK: FUNCTION
      */
+    
+    func userSearched(for searchText: String) {
+        if !searchText.isEmpty {
+            filterPackagesByNameAndDescription(searchText: searchText)
+        } else {
+            datePackages = samples
+        }
+    }
     
     func filterPackagesByNameAndDescription(searchText: String) {
         // Filter packages (w/ priority)
