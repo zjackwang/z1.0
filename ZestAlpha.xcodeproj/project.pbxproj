@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB59246627D58B1E0000C2BC /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB59246527D58B1E0000C2BC /* PersonalViewModel.swift */; };
+		DBDAAE0A27D3DA7C00393D9C /* ZestAlphaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE0927D3DA7C00393D9C /* ZestAlphaApp.swift */; };
+		DBDAAE0C27D3DA7C00393D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE0B27D3DA7C00393D9C /* ContentView.swift */; };
+		DBDAAE0E27D3DA7D00393D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDAAE0D27D3DA7D00393D9C /* Assets.xcassets */; };
+		DBDAAE1127D3DA7D00393D9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDAAE1027D3DA7D00393D9C /* Preview Assets.xcassets */; };
+		DBDAAE1327D3DA7D00393D9C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE1227D3DA7D00393D9C /* Persistence.swift */; };
+		DBDAAE1627D3DA7D00393D9C /* ZestAlpha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE1427D3DA7D00393D9C /* ZestAlpha.xcdatamodeld */; };
+		DBDAAE2227D3DBBA00393D9C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDAAE2127D3DBBA00393D9C /* Launch Screen.storyboard */; };
+		DBDAAE2427D3DBD300393D9C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE2327D3DBD300393D9C /* MainView.swift */; };
+		DBDAAE2627D3DBE100393D9C /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE2527D3DBE100393D9C /* PersonalView.swift */; };
+		DBDAAE2827D3DC2F00393D9C /* DatePackageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE2727D3DC2F00393D9C /* DatePackageView.swift */; };
+		DBDAAE2A27D3DC5000393D9C /* DatePackageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE2927D3DC5000393D9C /* DatePackageListView.swift */; };
+		DBDAAE2C27D3DC6200393D9C /* LemonIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE2B27D3DC6200393D9C /* LemonIconView.swift */; };
+		DBDAAE2E27D3DCC400393D9C /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE2D27D3DCC400393D9C /* SearchBarView.swift */; };
+		DBDAAE3127D3DCE300393D9C /* HeartIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE3027D3DCE300393D9C /* HeartIconView.swift */; };
+		DBDAAE3727D3DE1D00393D9C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE3627D3DE1D00393D9C /* OnboardingView.swift */; };
+		DBDAAE3927D3DE3C00393D9C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE3827D3DE3C00393D9C /* ProfileView.swift */; };
+		DBDAAE3B27D3DF0500393D9C /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE3A27D3DF0500393D9C /* UserSettingsManager.swift */; };
+		DBDAAE3E27D3E06700393D9C /* DatePackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE3D27D3E06700393D9C /* DatePackage.swift */; };
+		DBDAAE4027D3E41000393D9C /* ElevatedRectFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE3F27D3E41000393D9C /* ElevatedRectFrameView.swift */; };
+		DBDAAE4427D3E54800393D9C /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE4327D3E54800393D9C /* LogoView.swift */; };
+		DBDAAE4727D3E6B800393D9C /* ZestyDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE4627D3E6B800393D9C /* ZestyDescriptionView.swift */; };
+		DBDAAE4927D3E6CB00393D9C /* PackageDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE4827D3E6CB00393D9C /* PackageDescriptionView.swift */; };
+		DBDAAE4B27D437CA00393D9C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE4A27D437CA00393D9C /* MainViewModel.swift */; };
+		DBDAAE4D27D43A8300393D9C /* DatePackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE4C27D43A8300393D9C /* DatePackageViewModel.swift */; };
+		DBDAAE4F27D447D200393D9C /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE4E27D447D200393D9C /* UIConstants.swift */; };
+		DBDAAE5227D50B7900393D9C /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE5127D50B7900393D9C /* BackArrow.swift */; };
+		DBDAAE5427D50E4900393D9C /* ViewStateEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAAE5327D50E4900393D9C /* ViewStateEnums.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB59246527D58B1E0000C2BC /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
+		DBDAAE0627D3DA7C00393D9C /* ZestAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZestAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBDAAE0927D3DA7C00393D9C /* ZestAlphaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZestAlphaApp.swift; sourceTree = "<group>"; };
+		DBDAAE0B27D3DA7C00393D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBDAAE0D27D3DA7D00393D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBDAAE1027D3DA7D00393D9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBDAAE1227D3DA7D00393D9C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		DBDAAE1527D3DA7D00393D9C /* ZestAlpha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZestAlpha.xcdatamodel; sourceTree = "<group>"; };
+		DBDAAE2127D3DBBA00393D9C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		DBDAAE2327D3DBD300393D9C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DBDAAE2527D3DBE100393D9C /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		DBDAAE2727D3DC2F00393D9C /* DatePackageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePackageView.swift; sourceTree = "<group>"; };
+		DBDAAE2927D3DC5000393D9C /* DatePackageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePackageListView.swift; sourceTree = "<group>"; };
+		DBDAAE2B27D3DC6200393D9C /* LemonIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonIconView.swift; sourceTree = "<group>"; };
+		DBDAAE2D27D3DCC400393D9C /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		DBDAAE3027D3DCE300393D9C /* HeartIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartIconView.swift; sourceTree = "<group>"; };
+		DBDAAE3627D3DE1D00393D9C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DBDAAE3827D3DE3C00393D9C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DBDAAE3A27D3DF0500393D9C /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
+		DBDAAE3D27D3E06700393D9C /* DatePackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePackage.swift; sourceTree = "<group>"; };
+		DBDAAE3F27D3E41000393D9C /* ElevatedRectFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatedRectFrameView.swift; sourceTree = "<group>"; };
+		DBDAAE4327D3E54800393D9C /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		DBDAAE4627D3E6B800393D9C /* ZestyDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZestyDescriptionView.swift; sourceTree = "<group>"; };
+		DBDAAE4827D3E6CB00393D9C /* PackageDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDescriptionView.swift; sourceTree = "<group>"; };
+		DBDAAE4A27D437CA00393D9C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DBDAAE4C27D43A8300393D9C /* DatePackageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePackageViewModel.swift; sourceTree = "<group>"; };
+		DBDAAE4E27D447D200393D9C /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		DBDAAE5127D50B7900393D9C /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
+		DBDAAE5327D50E4900393D9C /* ViewStateEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateEnums.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBDAAE0327D3DA7C00393D9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBDAADFD27D3DA7C00393D9C = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE0827D3DA7C00393D9C /* ZestAlpha */,
+				DBDAAE0727D3DA7C00393D9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBDAAE0727D3DA7C00393D9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE0627D3DA7C00393D9C /* ZestAlpha.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBDAAE0827D3DA7C00393D9C /* ZestAlpha */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE3C27D3E05A00393D9C /* Models */,
+				DBDAAE3427D3DD7E00393D9C /* ViewModels */,
+				DBDAAE3327D3DD7300393D9C /* Persistence */,
+				DBDAAE1C27D3DB8B00393D9C /* Views */,
+				DBDAAE0927D3DA7C00393D9C /* ZestAlphaApp.swift */,
+				DBDAAE0D27D3DA7D00393D9C /* Assets.xcassets */,
+				DBDAAE0F27D3DA7D00393D9C /* Preview Content */,
+			);
+			path = ZestAlpha;
+			sourceTree = "<group>";
+		};
+		DBDAAE0F27D3DA7D00393D9C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE3227D3DD2000393D9C /* Random */,
+				DBDAAE1027D3DA7D00393D9C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBDAAE1C27D3DB8B00393D9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE1E27D3DBA300393D9C /* Components */,
+				DBDAAE1D27D3DB9200393D9C /* Screens */,
+				DBDAAE4E27D447D200393D9C /* UIConstants.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBDAAE1D27D3DB9200393D9C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE3527D3DE1000393D9C /* Onboarding */,
+				DBDAAE2127D3DBBA00393D9C /* Launch Screen.storyboard */,
+				DBDAAE2327D3DBD300393D9C /* MainView.swift */,
+				DBDAAE2527D3DBE100393D9C /* PersonalView.swift */,
+				DBDAAE5327D50E4900393D9C /* ViewStateEnums.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DBDAAE1E27D3DBA300393D9C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE4227D3E52E00393D9C /* BaseComponents */,
+				DBDAAE4127D3E4FC00393D9C /* Icons */,
+				DBDAAE2F27D3DCD300393D9C /* DatePackageViews */,
+				DBDAAE2D27D3DCC400393D9C /* SearchBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DBDAAE2F27D3DCD300393D9C /* DatePackageViews */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE4527D3E69300393D9C /* RowComponents */,
+				DBDAAE2727D3DC2F00393D9C /* DatePackageView.swift */,
+				DBDAAE2927D3DC5000393D9C /* DatePackageListView.swift */,
+			);
+			path = DatePackageViews;
+			sourceTree = "<group>";
+		};
+		DBDAAE3227D3DD2000393D9C /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE1227D3DA7D00393D9C /* Persistence.swift */,
+				DBDAAE1427D3DA7D00393D9C /* ZestAlpha.xcdatamodeld */,
+				DBDAAE0B27D3DA7C00393D9C /* ContentView.swift */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
+		DBDAAE3327D3DD7300393D9C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE3A27D3DF0500393D9C /* UserSettingsManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		DBDAAE3427D3DD7E00393D9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE4A27D437CA00393D9C /* MainViewModel.swift */,
+				DBDAAE4C27D43A8300393D9C /* DatePackageViewModel.swift */,
+				DB59246527D58B1E0000C2BC /* PersonalViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DBDAAE3527D3DE1000393D9C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE3627D3DE1D00393D9C /* OnboardingView.swift */,
+				DBDAAE3827D3DE3C00393D9C /* ProfileView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DBDAAE3C27D3E05A00393D9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE3D27D3E06700393D9C /* DatePackage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBDAAE4127D3E4FC00393D9C /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE2B27D3DC6200393D9C /* LemonIconView.swift */,
+				DBDAAE3027D3DCE300393D9C /* HeartIconView.swift */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		DBDAAE4227D3E52E00393D9C /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE5127D50B7900393D9C /* BackArrow.swift */,
+				DBDAAE3F27D3E41000393D9C /* ElevatedRectFrameView.swift */,
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		DBDAAE4527D3E69300393D9C /* RowComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAAE4327D3E54800393D9C /* LogoView.swift */,
+				DBDAAE4627D3E6B800393D9C /* ZestyDescriptionView.swift */,
+				DBDAAE4827D3E6CB00393D9C /* PackageDescriptionView.swift */,
+			);
+			path = RowComponents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBDAAE0527D3DA7C00393D9C /* ZestAlpha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBDAAE1927D3DA7D00393D9C /* Build configuration list for PBXNativeTarget "ZestAlpha" */;
+			buildPhases = (
+				DBDAAE0227D3DA7C00393D9C /* Sources */,
+				DBDAAE0327D3DA7C00393D9C /* Frameworks */,
+				DBDAAE0427D3DA7C00393D9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZestAlpha;
+			productName = ZestAlpha;
+			productReference = DBDAAE0627D3DA7C00393D9C /* ZestAlpha.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBDAADFE27D3DA7C00393D9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					DBDAAE0527D3DA7C00393D9C = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = DBDAAE0127D3DA7C00393D9C /* Build configuration list for PBXProject "ZestAlpha" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBDAADFD27D3DA7C00393D9C;
+			productRefGroup = DBDAAE0727D3DA7C00393D9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBDAAE0527D3DA7C00393D9C /* ZestAlpha */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBDAAE0427D3DA7C00393D9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBDAAE2227D3DBBA00393D9C /* Launch Screen.storyboard in Resources */,
+				DBDAAE1127D3DA7D00393D9C /* Preview Assets.xcassets in Resources */,
+				DBDAAE0E27D3DA7D00393D9C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBDAAE0227D3DA7C00393D9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBDAAE4427D3E54800393D9C /* LogoView.swift in Sources */,
+				DBDAAE2E27D3DCC400393D9C /* SearchBarView.swift in Sources */,
+				DBDAAE3927D3DE3C00393D9C /* ProfileView.swift in Sources */,
+				DBDAAE5427D50E4900393D9C /* ViewStateEnums.swift in Sources */,
+				DBDAAE2627D3DBE100393D9C /* PersonalView.swift in Sources */,
+				DBDAAE4927D3E6CB00393D9C /* PackageDescriptionView.swift in Sources */,
+				DBDAAE1327D3DA7D00393D9C /* Persistence.swift in Sources */,
+				DB59246627D58B1E0000C2BC /* PersonalViewModel.swift in Sources */,
+				DBDAAE4027D3E41000393D9C /* ElevatedRectFrameView.swift in Sources */,
+				DBDAAE0C27D3DA7C00393D9C /* ContentView.swift in Sources */,
+				DBDAAE4D27D43A8300393D9C /* DatePackageViewModel.swift in Sources */,
+				DBDAAE2827D3DC2F00393D9C /* DatePackageView.swift in Sources */,
+				DBDAAE1627D3DA7D00393D9C /* ZestAlpha.xcdatamodeld in Sources */,
+				DBDAAE3E27D3E06700393D9C /* DatePackage.swift in Sources */,
+				DBDAAE2A27D3DC5000393D9C /* DatePackageListView.swift in Sources */,
+				DBDAAE2427D3DBD300393D9C /* MainView.swift in Sources */,
+				DBDAAE3B27D3DF0500393D9C /* UserSettingsManager.swift in Sources */,
+				DBDAAE3127D3DCE300393D9C /* HeartIconView.swift in Sources */,
+				DBDAAE4B27D437CA00393D9C /* MainViewModel.swift in Sources */,
+				DBDAAE3727D3DE1D00393D9C /* OnboardingView.swift in Sources */,
+				DBDAAE5227D50B7900393D9C /* BackArrow.swift in Sources */,
+				DBDAAE0A27D3DA7C00393D9C /* ZestAlphaApp.swift in Sources */,
+				DBDAAE4F27D447D200393D9C /* UIConstants.swift in Sources */,
+				DBDAAE2C27D3DC6200393D9C /* LemonIconView.swift in Sources */,
+				DBDAAE4727D3E6B800393D9C /* ZestyDescriptionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DBDAAE1727D3DA7D00393D9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBDAAE1827D3DA7D00393D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBDAAE1A27D3DA7D00393D9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "ZestAlpha/Preview\\ Content ZestAlpha/Assets.xcassets";
+				DEVELOPMENT_TEAM = S6Z9UYN7ZL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zest.ZestAlpha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBDAAE1B27D3DA7D00393D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "ZestAlpha/Preview\\ Content ZestAlpha/Assets.xcassets";
+				DEVELOPMENT_TEAM = S6Z9UYN7ZL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zest.ZestAlpha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBDAAE0127D3DA7C00393D9C /* Build configuration list for PBXProject "ZestAlpha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBDAAE1727D3DA7D00393D9C /* Debug */,
+				DBDAAE1827D3DA7D00393D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBDAAE1927D3DA7D00393D9C /* Build configuration list for PBXNativeTarget "ZestAlpha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBDAAE1A27D3DA7D00393D9C /* Debug */,
+				DBDAAE1B27D3DA7D00393D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBDAAE1427D3DA7D00393D9C /* ZestAlpha.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBDAAE1527D3DA7D00393D9C /* ZestAlpha.xcdatamodel */,
+			);
+			currentVersion = DBDAAE1527D3DA7D00393D9C /* ZestAlpha.xcdatamodel */;
+			path = ZestAlpha.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DBDAADFE27D3DA7C00393D9C /* Project object */;
+}
