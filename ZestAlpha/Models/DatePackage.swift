@@ -32,8 +32,8 @@ extension DatePackage {
             """,
             Price: 19.99,
             PackageDescription: "Two SUPs for 2 hours each.",
-            LogoURLString: "AustinRowingDockIcon",
-            BusinessName: "LocalSUP",
+            LogoURLString: "austinRowingDockIcon",
+            BusinessName: "Local SUP",
             isFavorited: false
         ),
         DatePackage(
@@ -43,8 +43,8 @@ extension DatePackage {
             """,
             Price: 24.99,
             PackageDescription: "1 hour of axe throwin for two.",
-            LogoURLString: "",
-            BusinessName: "AxesToThrow",
+            LogoURLString: "axeIcon",
+            BusinessName: "Axes To Throw",
             isFavorited: false
         ),
         DatePackage(
@@ -54,9 +54,42 @@ extension DatePackage {
             """,
             Price: 14.49,
             PackageDescription: "1 escape room puzzle for two.",
-            LogoURLString: "",
-            BusinessName: "EscapeArtists",
+            LogoURLString: "escapeRoomIcon",
+            BusinessName: "Escape Artists",
             isFavorited: false
-        )
+        ),
+        DatePackage(
+            Name: "Drive In Movie Example",
+            ZestyDescription: """
+            Back to the 50s with a drive in movie! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, enim facilisis ullamcorper aliquam, sapien turpis rutrum nulla, ac auctor nibh eros quis mi.
+            """,
+            Price: 19.99,
+            PackageDescription: "1 ticket for 1 car to <movie>.",
+            LogoURLString: "driveInMovieIcon",
+            BusinessName: "Drive In Theater",
+            isFavorited: false
+        ),
+        DatePackage(
+            Name: "Skydiving Date!",
+            ZestyDescription: """
+            Conquer your fears of heights with skydiving! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies..
+            """,
+            Price: 100.00,
+            PackageDescription: "Skydiving for two.",
+            LogoURLString: "skydivingIcon",
+            BusinessName: "Austin Skydiving",
+            isFavorited: false
+        ),
+        DatePackage(
+            Name: "Rodeo Austin",
+            ZestyDescription: """
+            See the bullriders and listen to live music at the Austin Rodeo! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies.
+            """,
+            Price: 40.00,
+            PackageDescription: "Two tickets to the Austin rodeo on any day!",
+            LogoURLString: "austinRodeoIcon",
+            BusinessName: "Austin Rodeo",
+            isFavorited: false
+        ),
     ]
 }

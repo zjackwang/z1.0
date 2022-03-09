@@ -22,9 +22,6 @@ struct PackageDescriptionView: View {
             onBackgroundColor: onBackgroundColor,
             width: width
         )
-        .onTapGesture {
-            print("DEV >> Opening booking view")
-        }
     }
 }
 

@@ -16,8 +16,13 @@ class DatePackageViewModel: ObservableObject {
     @ObservedObject var pvm = PersonalViewModel.shared
 
     
+    // Searching/Displaying
     @Published var searchText: String = ""
     @Published var datePackages: [DatePackage] = []
+    
+    // Popups
+    @Published var showPackageDescription: Bool = false
+    @Published var shownInfo: String = ""
     
     let samples = DatePackage.samples
     
@@ -49,6 +54,8 @@ class DatePackageViewModel: ObservableObject {
             return 
         }
     }
+    
+    
     
     /*
      * Get test image LOGO

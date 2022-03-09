@@ -27,8 +27,15 @@ struct DatePackageView: View {
     var body: some View {
         LazyVGrid(columns: columns) {
             LogoView(logo: dpvm.getLogoTEST(for: datePackage.LogoURLString), isFavorited: datePackage.isFavorited)
+                .onTapGesture {
+                    dpvm.showPackageDescription.toggle()
+                    dpvm.shownInfo = """
+                    \(datePackage.Name) by \(datePackage.BusinessName)
+                    """
+                }
             ZestyDescriptionView(description: datePackage.ZestyDescription)
             PackageDescriptionView(description: datePackage.PackageDescription)
+                
         }
         .listRowBackground(background)
     }

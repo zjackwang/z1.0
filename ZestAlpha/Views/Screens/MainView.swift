@@ -46,7 +46,8 @@ struct MainView: View {
     private let secondary: Color = UIConstants.SECONDARY_COLOR
     private let onSecondary: Color = UIConstants.ON_SECONDARY_COLOR
     
-    
+    // Popup
+    private let popupPos = UIConstants.POPUP_POS
     
     var body: some View {
         NavigationView {
@@ -67,6 +68,9 @@ struct MainView: View {
                             .transition(transition)
                     }
                 }
+                // Show popups
+                popup
+                    .position(popupPos)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -158,6 +162,32 @@ extension MainView {
         } label: {
             BackArrow(width: backButtonWidth, height: backButtonHeight, alignment: backButtonAlignment, font: backButtonFont, color: backButtonColor)
         }
+    }
+    
+    private var popup: some View {
+        ZStack {
+            if dpvm.showPackageDescription {
+                // background
+                Rectangle()
+                    .foregroundColor(secondary.opacity(0.75))
+                VStack {
+                    Text("Date Info")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Text(dpvm.shownInfo)
+                        .font(.body)
+                    Spacer()
+                }
+                .padding()
+                .onTapGesture {
+                    dpvm.showPackageDescription.toggle()
+                    
+                }
+            }
+        }
+        .frame(width: 300, height: 200)
+        .cornerRadius(20).shadow(radius: 20)
     }
 
     

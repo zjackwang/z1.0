@@ -33,13 +33,8 @@ struct LogoView: View {
         ZStack {
             logo
                 .resizable()
-                .foregroundColor(.white)
+                .foregroundColor(backgroundColor)
                 .frame(width: width-10, height: height-10, alignment: .center)
-                .onTapGesture {
-                    // Sheet on main view
-                    mvm.showBusinessInfo.toggle()
-                    print("DEV >> Showing business info")
-                }
                 .background(
                     ElevatedRectFrameView(
                         content: "",

@@ -44,6 +44,7 @@ struct UIConstants {
     static let ZESTY_DESC_WIDTH: CGFloat = RECT_FRAME_HEIGHT + 75
     static let PKG_DESC_WIDTH: CGFloat = RECT_FRAME_HEIGHT + 25
     
+    static let POPUP_POS: CGPoint = CGPoint(x: SCREEN_WIDTH/2, y: 100)
     /*
      * Color Palette
      */

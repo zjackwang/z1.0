@@ -45,7 +45,6 @@ struct DatePackageListView: View {
                 ForEach(datePackages) { datePackage in
                     DatePackageView(datePackage: datePackage)
                         .padding([.top, .bottom], rowPadding)
-                        
                         .swipeActions(edge: .trailing) {
                             if !datePackage.isFavorited {
                                 Button {
